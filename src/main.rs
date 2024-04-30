@@ -20,19 +20,15 @@ struct Args {
 fn main() -> Result<(), Box<dyn Error>> {
     let args = Args::parse();
     let exe_path = Path::new(&args.path);
-
     if !exe_path.exists() {
         eprintln!("File not found: {:?}", exe_path);
         return Ok(());
     }
 
     println!("Patching: {:?}", exe_path);
-
     let mut exe_data = fs::read(exe_path)?;
 
-    let some_patches_applied =
-        apply_patches(&mut exe_data);
-
+    let some_patches_applied = apply_patches(&mut exe_data);
     if !some_patches_applied {
         println!("Nothing to patch");
         return Ok(());
