@@ -1,7 +1,7 @@
 use std::error::Error;
 
 pub struct Patch<'a> {
-    pub desc: &'static str,
+    desc: &'static str,
     search: &'a [u8],
     replace: &'a [u8],
 }
