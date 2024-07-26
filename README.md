@@ -1,4 +1,4 @@
-# new-ryzen-master-vbs-patch
+# ryzen-master-vbs-patch
 
 New AMD Ryzen Master VBS patcher allows AMD Ryzen Master to run while Hyper-V Virtualization is enabled.
 
